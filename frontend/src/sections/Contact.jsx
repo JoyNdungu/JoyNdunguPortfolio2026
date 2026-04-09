@@ -20,7 +20,7 @@ function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_HERE", // <-- Put your Web3Forms key here
+          access_key: "YOUR_ACCESS_KEY_HERE", 
           subject: "New Message from Portfolio",
           from_name: "Portfolio Visitor",
           message: message,

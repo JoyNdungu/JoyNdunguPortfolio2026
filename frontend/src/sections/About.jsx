@@ -531,10 +531,14 @@ case 'cv':
         background: '#0d0118',
       }}
     >
-      {/* Spline background */}
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+      {/* Background layer - Changed to fixed so it stays pinned behind scrolling content */}
+      <div style={{ position: 'fixed', inset: 0, zIndex: 0, background: '#0d0118' }}>
         <Background3D />
-       
+        <div style={{
+          position: 'absolute', 
+          inset: 0, 
+          background: 'rgba(13,1,24,0.85)', 
+        }} />
       </div>
 
       {/* Extra glow */}

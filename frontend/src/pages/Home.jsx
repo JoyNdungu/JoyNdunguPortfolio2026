@@ -1,8 +1,6 @@
 import Header from '../components/Header'
 import Hero from '../sections/Hero'
 import About from '../sections/About'
-import TechTeaser from '../sections/TechTeaser'
-import PosterTeaser from '../sections/PosterTeaser'
 import Contact from '../sections/Contact'
 import Showcase from '../sections/Showcase'
 
