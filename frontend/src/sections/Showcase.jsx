@@ -169,13 +169,13 @@ function Showcase() {
             Tech Projects
           </h2>
 
-          {/* Folder */}
+          {/* Folder - REDUCED SIZE */}
           <div
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{
               position: 'relative',
-              width: 'min(300px, 80vw)',
+              width: 'min(270px, 75vw)', // <-- Reduced from 300px, 80vw
               cursor: 'pointer',
               transform: hovered ? 'scale(1.03)' : 'scale(1)',
               transition: 'transform 0.4s',
@@ -187,7 +187,7 @@ function Showcase() {
               position: 'absolute', 
               top: 0, 
               left: 0,
-              width: '200px',
+              width: '170px', // <-- Reduced from 200px
               height: '28px',
               background: 'rgba(102,103,171,0.2)',
               backdropFilter: 'blur(16px)',
@@ -199,7 +199,7 @@ function Showcase() {
             {/* Body */}
             <div style={{
               marginTop: '22px',
-              padding: 'clamp(12px, 3.5vw, 28px)',
+              padding: 'clamp(12px, 3vw, 24px)', // <-- Slightly tighter padding
               borderRadius: '0 16px 16px 16px',
               backdropFilter: 'blur(28px)',
               WebkitBackdropFilter: 'blur(28px)',
@@ -220,21 +220,21 @@ function Showcase() {
                 pointerEvents: 'none',
               }} />
 
-              {/* Cards */}
+              {/* Cards - SCALED DOWN */}
               <div style={{
                 display: 'flex', 
                 gap: '5px',
                 justifyContent: 'center', alignItems: 'flex-end',
-                height: 'clamp(65px, 18vw, 150px)',
+                height: 'clamp(60px, 16vw, 130px)', // <-- Reduced max height
               }}>
                 {projects.map((p, i) => {
                   const rotations = [-10, -3, 5]
-                  const baseY  = [30, 34, 32][i]
-                  const hoverY = [-55, -65, -60][i]
+                  const baseY  = [25, 29, 27][i] // <-- Tweaked base Y to match new size
+                  const hoverY = [-45, -55, -50][i]
                   return (
                     <div key={i} style={{
-                      width:  'clamp(65px, 15vw, 95px)',
-                      height: 'clamp(65px, 15vw, 170px)',
+                      width:  'clamp(55px, 14vw, 85px)', // <-- Reduced from 95px max
+                      height: 'clamp(55px, 14vw, 150px)', // <-- Reduced from 170px max
                       borderRadius: '10px', overflow: 'hidden',
                       position: 'relative', flexShrink: 0,
                       background: p.color,
@@ -424,25 +424,26 @@ function Showcase() {
               </div>
             </div>
 
-            {/* Helper Text - Given Z-Index to stay above cards */}
-            <p style={{
+            {/* Helper Text - TIGHTENED MARGIN */}
+            <p className="poster-helper-text" style={{
               position: 'relative',
               zIndex: 10,
               fontFamily: 'Quicksand, sans-serif', fontSize: '10px',
               color: 'rgba(255, 255, 255, 0.37)', letterSpacing: '0.06em',
-              marginTop: '15px', 
+              marginTop: '10px', // <-- Reduced from 15px
               marginBottom: '0',
             }}>
               hover to pause · drag to spin
             </p>
 
-            {/* Button - Given Z-Index and explicit padding to ensure it is clickable */}
+            {/* Button - TIGHTENED MARGIN */}
             <div
+              className="poster-view-btn"
               onClick={() => navigate('/design')}
               style={{
                 position: 'relative',
                 zIndex: 10,
-                marginTop: '20px',
+                marginTop: '10px', // <-- Reduced from 20px
                 padding: '10px 20px', 
                 fontFamily: 'Quicksand, sans-serif', fontSize: '11px',
                 fontWeight: 600, 
@@ -535,7 +536,18 @@ function Showcase() {
           /* Tighten the padding of the Design Projects bottom half */
           .showcase-half:last-of-type {
              padding-top: 10px !important;
-             padding-bottom: 100px !important; /* Keep bottom padding so the user can scroll past it */
+             padding-bottom: 100px !important;
+          }
+
+          /* PULL THE VIEW ALL CONTENT UP */
+          .carousel-3d {
+             margin-bottom: 5px !important; /* Heavily reduced margin below the carousel */
+          }
+          .poster-helper-text {
+             margin-top: 5px !important; 
+          }
+          .poster-view-btn {
+             margin-top: 5px !important;
           }
         }
 

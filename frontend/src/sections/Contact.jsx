@@ -52,13 +52,13 @@ function Contact() {
     <section id="contactme" style={{
       position: 'relative',
       width: '100%',
-      minHeight: '100vh', // Changed from height to minHeight for mobile scrolling
-      overflowX: 'hidden', // Allow vertical scrolling, hide horizontal
+      minHeight: '100vh', 
+      overflowX: 'hidden', 
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '60px 20px', // Added breathing room for when it scrolls
+      padding: '60px 20px', 
     }}>
 
       {/* Background layer - Changed to fixed so it stays pinned behind scrolling content */}
@@ -182,9 +182,9 @@ function Contact() {
               <span>GitHub</span>
             </a>
 
-            {/* Instagram */}
+            {/* LinkedIn */}
             <a
-              href="https://www.instagram.com/yourusername/" 
+              href="https://www.linkedin.com/in/ndung-u-joy-gathoni-5682aa355/" 
               target="_blank"
               rel="noreferrer"
               className="btn-ghost"
@@ -192,12 +192,10 @@ function Contact() {
                 display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 16px', flex: '1 1 auto', justifyContent: 'center'
               }}
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-              <span>Instagram</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.23 0H1.77C.792 0 0 .774 0 1.73v20.54C0 23.226.792 24 1.77 24h20.46c.978 0 1.77-.774 1.77-1.73V1.73C24 .774 23.208 0 22.23 0zM7.09 20.452H3.545V9h3.545v11.452zM5.318 7.433a2.055 2.055 0 1 1 0-4.11 2.055 2.055 0 0 1 0 4.11zM20.452 20.452h-3.545v-5.605c0-1.336-.027-3.057-1.863-3.057-1.864 0-2.15 1.456-2.15 2.963v5.699h-3.544V9h3.404v1.561h.048c.474-.9 1.632-1.85 3.359-1.85 3.593 0 4.256 2.366 4.256 5.444v6.296z"/>
+              </svg>  
+             <span>LinkedIn</span>
             </a>
           </div>
 
