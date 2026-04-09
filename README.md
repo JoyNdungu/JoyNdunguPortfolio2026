@@ -1,6 +1,7 @@
   # Portfolio – Joy Ndungu Designs
 
-Welcome to my personal portfolio! 🎨💻
+Welcome to my personal portfolio! 
+
 This site showcases my skills, projects, and experience as a Full-Stack Developer & Tech Enthusiast.
 
   ### 🌐 Live Demo
